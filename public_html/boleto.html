@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viajes Japón - Trenes y Rutas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="index.html" class="logo">JapanTravel</a>
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="img/menu.png" class="menu-icono" alt="Menú">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="rutas.html">Rutas</a></li>
+                    <li><a href="calificar.html">Califícanos</a></li>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-content container">
+            <h1>Descubre Japón en Tren</h1>
+            <p>
+                Viaja por todo el archipiélago nipón con la máxima velocidad, comodidad y puntualidad. 
+                Reserva tus pases de tren y explora Tokio, Kioto y más allá sin complicaciones.
+            </p>
+            <a href="rutas.html" class="btn-1">Ver Rutas</a>
+        </div>
+    </header>
+
+    <section class="travel">
+        <div class="login-card">
+            <h2>BOLETOS</h2>
+            <p>Estación de Tren</p>
+            
+            <form id="formBoletos">
+                <div class="form-grid">
+                    <div class="form-column">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" placeholder="Nombre completo" required>
+                        
+                        <label for="pasaporte">Pasaporte:</label>
+                        <input type="text" id="pasaporte" placeholder="Número de pasaporte" required>
+                        
+                        <label for="tel">Teléfono:</label>
+                        <input type="text" id="tel" placeholder="Número de teléfono" required>
+
+                        <label for="correo">Correo:</label>
+                        <input type="email" id="correo" placeholder="Correo electrónico" required>
+
+                        <label for="pasajeros">Número de Pasajeros:</label>
+                        <input type="number" id="pasajeros" min="1" max="10" value="1" required>
+
+                        <div id="contenedorPasajerosExtra"></div>
+                    </div>
+
+                    <div class="form-column">
+                        <label for="clase">Clase de Asiento:</label>
+                        <select id="clase" required>
+                            <option value="estandar" data-precio="0">Clase Estándar (Base)</option>
+                            <option value="turista-plus" data-precio="20">Clase Turista Plus (+$20 p/p)</option>
+                            <option value="gran-clase" data-precio="50">Gran Clase / Green Car (+$50 p/p)</option>
+                            <option value="vip" data-precio="90">Gran Clase VIP / Suite (+$90 p/p)</option>
+                        </select>
+
+                        <label for="ruta">Ruta de Tren:</label>
+                        <select id="ruta" required>
+                            <option value="" disabled selected>Seleccione una ruta</option>
+                            <option value="tokio-kioto" data-precio="120">Tokio - Kioto ($120)</option>
+                            <option value="osaka-nara" data-precio="45">Osaka - Nara ($45)</option>
+                            <option value="norte" data-precio="150">Hokkaido ($150)</option>
+                            <option value="tokio-sendai" data-precio="110">Tokio - Sendai ($110)</option>
+                            <option value="tokio-kanazawa" data-precio="130">Tokio - Kanazawa ($130)</option>
+                            <option value="osaka-hiroshima" data-precio="140">Osaka - Hiroshima ($140)</option>
+                        </select>
+
+                        <label for="fechaIda">Fecha de Ida:</label>
+                        <input type="date" id="fechaIda" required>
+
+                        <label for="horarioIda">Horario de Ida:</label>
+                        <select id="horarioIda" required>
+                            <option value="" disabled selected>Seleccione horario de ida</option>
+                            <option value="06:30">06:30 AM - Express Madrugada</option>
+                            <option value="08:00">08:00 AM - Mañana</option>
+                            <option value="10:15">10:15 AM - Media Mañana</option>
+                            <option value="12:30">12:30 PM - Mediodía</option>
+                            <option value="15:00">03:00 PM - Tarde Temprano</option>
+                            <option value="17:00">05:00 PM - Tarde</option>
+                            <option value="19:30">07:30 PM - Noche</option>
+                            <option value="21:00">09:00 PM - Nocturno</option>
+                        </select>
+
+                        <label for="fechaRegreso">Fecha de Regreso:</label>
+                        <input type="date" id="fechaRegreso" required>
+
+                        <label for="horarioRegreso">Horario de Regreso:</label>
+                        <select id="horarioRegreso" required>
+                            <option value="" disabled selected>Seleccione horario de regreso</option>
+                            <option value="06:30">06:30 AM - Express Madrugada</option>
+                            <option value="08:00">08:00 AM - Mañana</option>
+                            <option value="10:15">10:15 AM - Media Mañana</option>
+                            <option value="12:30">12:30 PM - Mediodía</option>
+                            <option value="15:00">03:00 PM - Tarde Temprano</option>
+                            <option value="17:00">05:00 PM - Tarde</option>
+                            <option value="19:30">07:30 PM - Noche</option>
+                            <option value="21:00">09:00 PM - Nocturno</option>
+                        </select>
+
+                        <label for="metodoPago">Método de Pago:</label>
+                        <select id="metodoPago" required>
+                            <option value="" disabled selected>Seleccione método de pago</option>
+                            <option value="tarjeta">Tarjeta de Crédito / Débito</option>
+                            <option value="efectivo">Pago en Taquilla / Efectivo</option>
+                        </select>
+
+                        <div class="total-preview">
+                            <p><strong>Total Estimado:</strong> <span id="spanTotal">$0</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit">Reservar y Ver Boleto</button>
+            </form>
+
+            <div id="boletoDigital" class="ticket-card" style="display: none;">
+                <h3>🎫 Pase de Abordo - Japón</h3>
+                <div class="ticket-info">
+                    <p><strong>Pasajero:</strong> <span id="resNombre">---</span></p>
+                    <p><strong>Pasajeros:</strong> <span id="resPasajeros">---</span></p>
+                    <p><strong>Ruta:</strong> <span id="resRuta">---</span></p>
+                    <p><strong>Ida:</strong> <span id="resFechaIda">---</span> a las <span id="resHorarioIda">---</span></p>
+                    <p><strong>Regreso:</strong> <span id="resFechaRegreso">---</span> a las <span id="resHorarioRegreso">---</span></p>
+                    <p><strong>Método de Pago:</strong> <span id="resPago">---</span></p>
+                    <p><strong>Total a Pagar:</strong> <span id="resTotal">$0</span></p>
+                    <p><strong>Nº de Reserva:</strong> <span id="resNumero">#0000</span></p>
+                </div>
+                <button type="button" id="btnVolver" class="btn-secondary">Reservar Otro</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3>Rutas</h3>
+                <ul>
+                    <li>Tokio - Kioto</li>
+                    <li>Osaka - Nara</li>
+                    <li>Hokkaido</li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Trenes</h3>
+                <ul>
+                    <li>Shinkansen Tokaido</li>
+                    <li>Shinkansen Tohoku</li>
+                    <li>Expresos Limitados</li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Ayuda</h3>
+                <ul>
+                    <li>Preguntas Frecuentes</li>
+                    <li>Reembolsos</li>
+                    <li>Contacto</li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Síguenos</h3>
+                <ul>
+                    <li>Twitter / X</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="boleto.js"></script>
+</body>
+</html>

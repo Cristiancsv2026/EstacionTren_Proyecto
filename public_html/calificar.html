@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viajes Japón - Evaluación de Satisfacción</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="index.html" class="logo">JapanTravel</a>
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="img/menu.png" class="menu-icono" alt="Menú">
+            </label>
+            <nav class="navbar">
+                <ul>
+                     <li><a href="index.html">Inicio</a></li>
+                    <li><a href="rutas.html">Rutas</a></li>
+                   
+                    <li><a href="boleto.html">Boletos</a></li>
+                    <li><a href="login.html">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-content container">
+            <h1>Evaluación de Satisfacción</h1>
+            <p>
+                Su opinión es muy importante para nosotros. Ayúdennos a mejorar la calidad de nuestros servicios y rutas de tren en Japón compartiendo su experiencia.
+            </p>
+        </div>
+    </header>
+
+    <section class="travel">
+        <div class="login-card" style="width: 900px; max-width: 95%;">
+            <h2>ENCUESTA</h2>
+            <p>Formulario de Satisfacción del Cliente</p>
+            
+           <form id="formEncuesta">
+    <div class="form-grid">
+        <div class="form-column">
+            <label>1. Nombre del pasajero:</label>
+            <input type="text" name="nombre" placeholder="Nombre completo" required>
+
+            <label>2. Calificación general de su experiencia de viaje:</label>
+            <div style="display: flex; gap: 15px; margin: 10px 0 20px 0; color: #fff;">
+                <label><input type="radio" name="experiencia" value="excelente" required> Excelente</label>
+                <label><input type="radio" name="experiencia" value="buena"> Buena</label>
+                <label><input type="radio" name="experiencia" value="regular"> Regular</label>
+            </div>
+
+            <label for="puntualidad">3. ¿Qué tan puntual considera que fueron los trenes?</label>
+            <select id="puntualidad" name="puntualidad" required>
+                <option value="" disabled selected>Seleccione una opción</option>
+                <option value="muy-puntual">Extremadamente puntual</option>
+                <option value="puntual">Puntual</option>
+                <option value="retraso-leve">Con ligeros retrasos</option>
+                <option value="impuntual">Impuntual</option>
+            </select>
+
+            <label>4. ¿Qué servicios a bordo utilizó o destacaría?</label>
+            <div style="display: flex; flex-direction: column; gap: 8px; margin: 10px 0 20px 0; color: #fff;">
+                <label><input type="checkbox" name="servicios[]" value="wifi"> Wi-Fi a bordo</label>
+                <label><input type="checkbox" name="servicios[]" value="asientos"> Comodidad de asientos</label>
+                <label><input type="checkbox" name="servicios[]" value="cafeteria"> Carrito de aperitivos / Cafetería</label>
+            </div>
+        </div>
+
+        <div class="form-column">
+            <label for="atencion">5. ¿Cómo califica la atención del personal?</label>
+            <select id="atencion" name="atencion" required>
+                <option value="" disabled selected>Seleccione una calificación</option>
+                <option value="5">5 - Sobresaliente</option>
+                <option value="4">4 - Muy bueno</option>
+                <option value="3">3 - Satisfactorio</option>
+                <option value="2">2 - Mejorable</option>
+                <option value="1">1 - Deficiente</option>
+            </select>
+
+            <label for="recomendacion">6. ¿Recomendaría nuestros servicios de trenes?</label>
+            <div style="display: flex; gap: 20px; margin: 10px 0 20px 0; color: #fff;">
+                <label><input type="radio" name="recomendar" value="si" required> Sí, definitivamente</label>
+                <label><input type="radio" name="recomendar" value="no"> No estoy seguro</label>
+            </div>
+
+            <label for="comentarios">Comentarios adicionales o sugerencias:</label>
+            <textarea id="comentarios" name="comentarios" placeholder="Escriba aquí sus observaciones..." style="width: 100%; height: 80px; background: transparent; border: none; border-bottom: 2px solid rgba(255, 255, 255, 0.8); color: #fff; outline: none; resize: none; margin-bottom: 20px; padding: 10px;"></textarea>
+
+            <div class="total-preview" style="background: rgba(217, 119, 140, 0.2); border: 1px solid rgba(255, 183, 197, 0.4); padding: 10px; border-radius: 10px; text-align: center; margin-bottom: 15px;">
+                <p style="margin: 0; color: #ffb7c5;">Sus respuestas serán registradas en la base de datos.</p>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" style="grid-column: span 2;">Enviar Evaluación</button>
+</form>
+
+            <div id="mensajeExito" style="display: none; text-align: center; padding: 30px;">
+                <h3 style="color: #ffb7c5; font-size: 1.8em; margin-bottom: 15px;">¡Gracias por su opinión!</h3>
+                <p style="color: #fff; margin-bottom: 20px;">La evaluación ha quedado registrada correctamente en el sistema.</p>
+                <button type="button" id="btnReiniciar" style="width: 200px; margin: 0 auto;">Enviar Otra</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="link">
+                <h3>Rutas</h3>
+                <ul>
+                    <li>Tokio - Kioto</li>
+                    <li>Osaka - Nara</li>
+                    <li>Hokkaido</li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Trenes</h3>
+                <ul>
+                    <li>Shinkansen Tokaido</li>
+                    <li>Shinkansen Tohoku</li>
+                    <li>Expresos Limitados</li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Ayuda</h3>
+                <ul>
+                    <li>Preguntas Frecuentes</li>
+                    <li>Reembolsos</li>
+                    <li>Contacto</li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Síguenos</h3>
+                <ul>
+                    <li>Twitter / X</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cali.js"></script>
+</body>
+</html>

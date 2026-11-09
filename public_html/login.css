@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('img/tren.jpg') no-repeat;
+    background-size: cover;
+    background-position: center; 
+}
+
+.login-card {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: rgba(26, 26, 26, 0.4); 
+    border: 2px solid rgba(255, 183, 197, 0.5); 
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    color: #fff;
+}
+
+.login-card h2 {
+    font-size: 2em;
+    color: #ffb7c5;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input, select, textarea {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+    font-size: 1em;
+    color: #fff;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    border-bottom: 2px solid #ffb7c5;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+    width: 100%;
+    height: 45px;
+    background: #d9778c; 
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #c84b31; 
+    color: #fff;
+    border: 1px solid #ffb7c5;
+}
