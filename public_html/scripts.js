@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const formRegistro = document.getElementById('formRegistro');
     const formEncuesta = document.getElementById('formEncuesta');
 
-    // Manejo del registro de viajero
+ 
     formRegistro.addEventListener('submit', (e) => {
         e.preventDefault();
         
@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const dpi = document.getElementById('dpi').value;
         const clase = document.getElementById('clase').value;
 
-        // Guardar datos temporalmente
+    
         localStorage.setItem('pasajero', nombre);
 
-        // Mostrar boleto
+     
         const datosBoleto = document.getElementById('datosBoleto');
         datosBoleto.innerHTML = `
             <p><strong>Pasajero:</strong> ${nombre}</p>
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('evaluacion').classList.remove('oculto');
     });
 
-    // Manejo de la evaluación
+  
     formEncuesta.addEventListener('submit', (e) => {
         e.preventDefault();
 
