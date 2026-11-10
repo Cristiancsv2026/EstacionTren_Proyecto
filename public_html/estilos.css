@@ -890,3 +890,83 @@ input[type="checkbox"] {
     margin-right: 6px;
     display: inline-block;
 }
+
+
+/* admin */
+.admin-card {
+    width: 95% !important;
+    max-width: 1400px !important;
+    margin: 40px auto !important;
+    padding: 40px !important;
+}
+
+.admin-header {
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 183, 197, 0.4);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.admin-header h2 {
+    color: #ffb7c5;
+    font-size: 2em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.table-responsive {
+    width: 100%;
+}
+
+.admin-table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 15px !important;
+    background: transparent !important;
+}
+
+.admin-table thead {
+    display: none;
+}
+
+.admin-table tr {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 12px !important;
+    background: rgba(26, 26, 26, 0.85) !important;
+    border: 2px solid #ffb7c5 !important;
+    border-radius: 16px !important;
+    padding: 20px !important;
+    margin-bottom: 20px !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4) !important;
+    transition: 0.3s ease !important;
+}
+
+.admin-table tr:hover {
+    background: rgba(40, 40, 40, 0.95) !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 25px rgba(217, 119, 140, 0.25) !important;
+}
+
+.admin-table td {
+    display: flex !important;
+    flex-direction: column !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 183, 197, 0.3) !important;
+    border-radius: 10px !important;
+    padding: 12px !important;
+    color: #ffffff !important;
+    font-size: 0.9em !important;
+    text-align: left !important;
+    vertical-align: top !important;
+}
+
+.admin-table td::before {
+    content: attr(data-label);
+    color: #ffb7c5 !important;
+    font-weight: 700 !important;
+    font-size: 0.8em !important;
+    text-transform: uppercase !important;
+    margin-bottom: 6px !important;
+    letter-spacing: 0.5px;
+}

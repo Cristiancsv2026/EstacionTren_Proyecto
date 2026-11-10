@@ -1,8 +1,8 @@
 <?php
-$servidor = "sql209.infinityfree.com";
-$usuario = "if0_43392572";
-$password = "ZKVhDiycROBnCUv";
-$baseDatos = "if0_43392572_viaje"; 
+$servidor = "localhost";
+$usuario = "root";
+$password = "";
+$baseDatos = "viajes_japon";
 
 $conexion = new mysqli($servidor, $usuario, $password, $baseDatos);
 
